@@ -38,7 +38,7 @@
   (is (= true (map? {3 4, 7 8})))
   (is (= true (set? #{3 4 7})))
 
-  (is (not (= nil '())))
+  (is (not (= nil ())))
   (is (not (= nil [])))
   (is (not (= nil {})))
   (is (not (= nil #{})))
