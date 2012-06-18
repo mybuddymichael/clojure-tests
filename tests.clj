@@ -3,6 +3,14 @@
 (alias 'string 'clojure.string)
 
 
+(deftest truthiness-negation-and-nil
+  (is (= 3 3))
+  (is (not (= 3 4)))
+
+  (is (= true (not false)))
+  (is (= false (not true))))
+
+
 (deftest arithmetic
   (is (= true (number? 3)))
 
