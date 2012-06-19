@@ -1,4 +1,4 @@
-(ns tests.michael)
+(ns michael.test)
 (use 'clojure.test)
 (alias 'string 'clojure.string)
 
