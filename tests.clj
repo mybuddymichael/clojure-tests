@@ -6,13 +6,14 @@
 (deftest truthiness-negation-and-nil
   (is (= 3 3))
   (is (not (= 3 4)))
+  (is (not= 3 4))
 
-  (is (= true (not false)))
+  (is (not false))
   (is (= false (not true))))
 
 
 (deftest arithmetic
-  (is (= true (number? 3)))
+  (is (number? 3))
 
   (is (= 7 (+ 3 4)))
   (is (= 3 (- 7 4)))
@@ -26,22 +27,22 @@
 
 
 (deftest strings
-  (is (= true (string? "Hello.")))
+  (is (string? "Hello."))
 
   (is (= "Hello, Michael." (str "Hello, " "Michael.")))
   (is (= "HELLO!" (string/upper-case "Hello!"))))
 
 
 (deftest collections
-  (is (= true (vector? [3 4 7])))
-  (is (= true (list? '(3 4 7))))
-  (is (= true (map? {3 4, 7 8})))
-  (is (= true (set? #{3 4 7})))
+  (is (vector? [3 4 7]))
+  (is (list? '(3 4 7)))
+  (is (map? {3 4, 7 8}))
+  (is (set? #{3 4 7}))
 
-  (is (not (= nil ())))
-  (is (not (= nil [])))
-  (is (not (= nil {})))
-  (is (not (= nil #{})))
+  (is (not= nil ()))
+  (is (not= nil []))
+  (is (not= nil {}))
+  (is (not= nil #{}))
 
   (is (= [3 4 7 8 9] (conj [3 4 7] 8 9)))
   (is (= '(9 8 3 4 7) (conj '(3 4 7) 8 9))))
@@ -51,7 +52,7 @@
   (defn square [x] (* x x))
   (def cube (fn [x] (* x x x)))
 
-  (is (= true (fn? square)))
+  (is (fn? square))
 
   (is (= 9 (square 3)))
   (is (= 27 (cube 3))))
