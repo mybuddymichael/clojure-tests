@@ -1,6 +1,6 @@
-(ns michael.test)
-(use 'clojure.test)
-(alias 'string 'clojure.string)
+(ns michael.test
+  (:require [clojure.test :refer (deftest is run-tests)]
+            [clojure.string :as string]))
 
 
 (deftest truthiness-negation-and-nil
