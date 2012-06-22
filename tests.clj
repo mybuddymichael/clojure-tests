@@ -4,12 +4,14 @@
 
 
 (deftest truthiness-negation-and-nil
+  (is true)
+  (is (not false))
+  (is (= false (not true)))
+
   (is (= 3 3))
   (is (not (= 3 4)))
   (is (not= 3 4))
 
-  (is (not false))
-  (is (= false (not true))))
 
 
 (deftest arithmetic
