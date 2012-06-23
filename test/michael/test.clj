@@ -48,10 +48,11 @@
   (is (map? {3 4, 7 8}))
   (is (set? #{3 4 7}))
 
-  (is (not (nil? ())))
-  (is (not (nil? [])))
-  (is (not (nil? {})))
-  (is (not (nil? #{})))
+  (testing "Empty collections do not evaluate to nil"
+    (is (not (nil? ())))
+    (is (not (nil? [])))
+    (is (not (nil? {})))
+    (is (not (nil? #{}))))
 
   (is (= [3 4 7 8 9] (conj [3 4 7] 8 9)))
   (is (= '(9 8 3 4 7) (conj '(3 4 7) 8 9))))
