@@ -1,5 +1,5 @@
 (ns michael.test
-  (:require [clojure.test :refer (deftest is run-tests)]
+  (:require [clojure.test :refer [deftest is run-tests]]
             [clojure.string :as string]))
 
 
