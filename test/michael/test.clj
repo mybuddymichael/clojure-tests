@@ -59,8 +59,9 @@
 
 
 (deftest functions
-  (defn square [x] (* x x))
-  (def cube (fn [x] (* x x x)))
+  (testing "defn is a shortcut for def <symbol> (fn ..."
+    (defn square [x] (* x x))
+    (def cube (fn [x] (* x x x))))
 
   (is (fn? square))
 
