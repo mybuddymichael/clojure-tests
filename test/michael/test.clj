@@ -67,6 +67,3 @@
   (is (= 27 (cube 3))))
 
   (is (= 9 ((fn [x] (* x x)) 3)))
-
-
-(run-tests)
