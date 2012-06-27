@@ -14,8 +14,6 @@
 
   (is (true? true))
   (is (false? false))
-  (is (not (true? 3)))
-  (is (true? (= 3 3)))
 
   (is nil? nil)
   (is not (nil? false)))
