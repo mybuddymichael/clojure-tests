@@ -56,7 +56,12 @@
   (is (= '(9 8 3 4 7) (conj '(3 4 7) 8 9)))
 
   (is (= 3 (first [3 4 7 8])))
-  (is (= [4 7 8] (rest [3 4 7 8]))))
+  (is (= [4 7 8] (rest [3 4 7 8])))
+
+  (testing "retrieving values from a map"
+    (def my-map {:first-name "Michael"})
+    (is (= "Michael" (my-map :first-name)))
+    (is (= "Michael" (:first-name my-map)))))
 
 
 (deftest functions
