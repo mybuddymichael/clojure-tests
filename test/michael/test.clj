@@ -40,7 +40,9 @@
   (is (= "HELLO!" (string/upper-case "Hello!"))))
 
 (deftest regular-expressions
-  (is (= "The Bear" (re-find #"The Bear" "Michael, The Bear"))))
+  (def search-string "Michael, The Bear")
+  (is (= "The Bear" (re-find #"The Bear" search-string)))
+  (is (= nil (re-find #"The Monkey" search-string))))
 
 
 (deftest collections
