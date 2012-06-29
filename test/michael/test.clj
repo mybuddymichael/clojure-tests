@@ -74,6 +74,19 @@
     (defn square [x] (* x x))
     (def cube (fn [x] (* x x x))))
 
+  (testing "documenting a function"
+    (defn add-one
+      "Returns a number equal to x plus 1"
+      [x]
+      (+ x 1))
+    (is (= 4 (add-one 3)))
+
+    (defn add-two
+      {:doc "Returns a number equal to x plus 2"}
+      [x]
+      (+ x 2))
+    (is (= 5 (add-two 3))))
+
   (is (fn? square))
 
   (is (= 9 (square 3)))
