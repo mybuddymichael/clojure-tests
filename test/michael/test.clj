@@ -39,6 +39,9 @@
   (is (= "Hello, Michael." (str "Hello, " "Michael.")))
   (is (= "HELLO!" (string/upper-case "Hello!"))))
 
+(deftest regular-expressions
+  (is (= "The Bear" (re-find #"The Bear" "Michael, The Bear"))))
+
 
 (deftest collections
   (is (vector? [3 4 7]))
