@@ -39,6 +39,7 @@
   (is (= "Hello, Michael." (str "Hello, " "Michael.")))
   (is (= "HELLO!" (string/upper-case "Hello!"))))
 
+
 (deftest regular-expressions
   (def search-string "Michael, The Bear")
   (is (= "The Bear" (re-find #"The Bear" search-string)))
