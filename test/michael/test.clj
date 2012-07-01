@@ -91,6 +91,6 @@
   (is (fn? square))
 
   (is (= 9 (square 3)))
-  (is (= 27 (cube 3))))
+  (is (= 27 (cube 3)))
 
-  (is (= 9 ((fn [x] (* x x)) 3)))
+  (is (= 9 ((fn [x] (* x x)) 3))))
