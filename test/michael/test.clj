@@ -94,3 +94,11 @@
   (is (= 27 (cube 3)))
 
   (is (= 9 ((fn [x] (* x x)) 3))))
+
+
+(deftest recursion
+  (defn factorial [x]
+    (if (= x 1)
+        1
+        (* x (factorial (- x 1)))))
+  (is (= 24 (factorial 4))))
