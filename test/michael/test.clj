@@ -102,3 +102,9 @@
         1
         (* x (factorial (- x 1)))))
   (is (= 24 (factorial 4))))
+
+
+(deftest destructuring
+  (def my-name ["Michael" "the" "Bear"])
+  (let [[f-name m-name l-name] my-name]
+    (is (= "the Bear, Michael" (str m-name " " l-name ", " f-name)))))
