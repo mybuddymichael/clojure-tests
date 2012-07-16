@@ -106,5 +106,20 @@
 
 (deftest destructuring
   (def my-name ["Michael" "the" "Bear"])
-  (let [[f-name m-name l-name] my-name]
-    (is (= "the Bear, Michael" (str m-name " " l-name ", " f-name)))))
+  (def my-name-map {:f-name "Michael" :m-name "the" :l-name "Bear"})
+
+  (testing "destructuring a vector"
+    (let [[f-name m-name l-name] my-name]
+      (is (= "the Bear, Michael" (str m-name " " l-name ", " f-name)))))
+
+  (testing "destructuring a map"
+    (let [{f :f-name m :m-name l :l-name} my-name-map]
+      (is (= "Michael" f))
+      (is (= "the" m)))
+    (let [{:keys [m-name]} my-name-map]
+      (is (= "the" m-name))))
+
+  (testing "gathering up extra values"
+    (let [[x & rest] my-name]
+      (is (= "Michael" x))
+      (is (= '("the" "Bear") rest)))))
