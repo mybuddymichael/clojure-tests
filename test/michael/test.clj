@@ -123,3 +123,7 @@
     (let [[x & rest] my-name]
       (is (= "Michael" x))
       (is (= '("the" "Bear") rest)))))
+
+(deftest functional-standbys
+  (is (= 10 (reduce + [1 2 3 4])))
+  (is (= [2 4 6 8] (map (fn [x] (* x 2)) [1 2 3 4]))))
