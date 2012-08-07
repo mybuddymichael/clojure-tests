@@ -63,6 +63,7 @@
 
   (is (= 3 (first [3 4 7 8])))
   (is (= [4 7 8] (rest [3 4 7 8])))
+  (is (= 8 (last [3 4 7 8])))
 
   (testing "retrieving values from a map"
     (def my-map {:first-name "Michael"})
