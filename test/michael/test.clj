@@ -53,7 +53,7 @@
   (is (set? #{3 4 7}))
 
   (testing "Empty collections do not evaluate to nil"
-    (is (not (nil? ())))
+    (is (not (nil? '())))
     (is (not (nil? [])))
     (is (not (nil? {})))
     (is (not (nil? #{}))))
