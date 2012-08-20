@@ -129,3 +129,7 @@
   (is (= 10 (reduce + [1 2 3 4])))
   (is (= [2 4 6 8] (map (fn [x] (* x 2)) [1 2 3 4])))
   (is (= [2 4 6 8] (map #(* % 2) [1 2 3 4]))))
+
+
+(deftest clojure-core-utilities
+  (is (= "a-keyword" (name :a-keyword))))
