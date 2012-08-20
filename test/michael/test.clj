@@ -37,7 +37,10 @@
   (is (string? "Hello."))
 
   (is (= "Hello, Michael." (str "Hello, " "Michael.")))
-  (is (= "HELLO!" (string/upper-case "Hello!"))))
+  (is (= "HELLO!" (string/upper-case "Hello!")))
+
+  (is (= "Bears, Beats, Battlestar Gallactica"
+         (string/join ", " ["Bears" "Beats" "Battlestar Gallactica"]))))
 
 
 (deftest regular-expressions
