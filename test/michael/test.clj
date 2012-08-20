@@ -126,7 +126,10 @@
   (testing "gathering up extra values"
     (let [[x & rest] my-name]
       (is (= "Michael" x))
-      (is (= '("the" "Bear") rest)))))
+      (is (= '("the" "Bear") rest))))
+
+  (is (= 10 (apply + [1 2 3 4]))))
+
 
 (deftest functional-standbys
   (is (= 10 (reduce + [1 2 3 4])))
