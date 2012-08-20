@@ -15,7 +15,7 @@
   (is (true? true))
   (is (false? false))
 
-  (is nil? nil)
+  (is (nil? nil))
   (is not (nil? false)))
 
 
